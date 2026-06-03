@@ -1,0 +1,38 @@
+{
+  "productName": "ARIA",
+  "version": "0.1.0",
+  "identifier": "dev.aria-os.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "ARIA",
+        "width": 420,
+        "height": 700,
+        "minWidth": 360,
+        "minHeight": 500,
+        "resizable": true,
+        "decorations": true,
+        "center": true,
+        "alwaysOnTop": false
+      }
+    ],
+    "trayIcon": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png"
+    ]
+  }
+}
